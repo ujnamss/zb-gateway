@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - ${PORT}:${PORT}
+    volumes:
+      - ${SSL_DIR}:/ssl
     networks:
      - zb_net
 
