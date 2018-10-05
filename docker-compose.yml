@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - ${PORT}:${PORT}
+      - ${SSL_PORT}:{SSL_PORT}
     volumes:
       - ${SSL_DIR}:/ssl
     networks:
