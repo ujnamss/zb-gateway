@@ -1,0 +1,14 @@
+version: '3'
+services:
+  zb_gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    ports:
+      - ${PORT}:${PORT}
+    networks:
+     - zb_net
+
+networks:
+  zb_net:
+    external: true
